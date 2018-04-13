@@ -1,0 +1,20 @@
+.map
+{
+    width: 50%
+}
+
+path
+{
+    fill: #dfffff;
+    transition: 0.2s;
+    stroke:#000000;
+    stroke-width:1.5
+}
+
+path:hover
+{
+    fill: #901826;
+    cursor: pointer;
+    stroke:#000000;
+    stroke-width:1.5
+}

@@ -1,0 +1,23 @@
+body {
+  margin-top: 1em;
+}
+
+/*** div gauche : contient la map et champ de recherche ***/
+  aside {
+    width: 30%;
+  }
+
+/*** div droite : contient header et résultats de recherche ***/
+#droite {
+  width: 70%;
+}
+
+#fenetre {
+  position: relative;
+  overflow: hidden;
+  width: 65%;
+}
+
+h1 {
+  font-size: 4em;
+}

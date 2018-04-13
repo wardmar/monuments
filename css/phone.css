@@ -1,0 +1,14 @@
+
+/*** div gauche : contient la map et champ de recherche ***/
+  aside {
+    width: 50%;
+  }
+
+/*** div droite : contient header et résultats de recherche ***/
+  #droite {
+    width: 50%;
+  }
+
+  h1 {
+    font-size: 1.8em;
+  }

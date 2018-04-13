@@ -1,0 +1,314 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+:root {
+  font-size: 10px;
+}
+
+body {
+  margin-top: 1em;
+}
+
+/*** Header ***/
+
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+        h1 {
+          font-family: 'im_fell_english_proitalic';
+        }
+
+        /* ------------------ */
+        /* -- -- frises -- -- */
+        /* ------------------ */
+        .texte {
+          fill: #fff;
+        }
+        #chronoFrise {
+          width: 100%;
+          height: auto;
+          cursor: pointer;
+        }
+        #friseCat {
+          height: 4vw;
+          width: auto;
+          cursor: pointer;
+          -webkit-animation: noir 3s;  /* Safari 4.0 - 8.0 */
+          animation: noir 3s;
+        }
+        .rose {
+          fill:#c64c4e;
+          -webkit-animation: rose 3s;  /* Safari 4.0 - 8.0 */
+          animation: rose 3s;
+        }
+        .rouge, .texte {
+          fill:#901826;
+          -webkit-animation: rouge 3s;  /* Safari 4.0 - 8.0 */
+          animation: rouge 3s;
+        }
+              #chronoFrise path:hover {
+                fill:#fd7c7a;
+              }
+              #friseCat a:hover, path:hover, .temple:hover {
+                fill:#901826;
+              }
+
+        #etiquet-frises {
+            height: 1.5vw;
+            width: 96%;
+            font-size: 1vw;
+            text-align: center;
+            margin: 0 5%;
+            background-image: linear-gradient(to bottom, rgba(125, 158, 165, 1), rgba(125, 158, 165, 0));
+            border-top: 3px solid black;
+        }
+
+            #nom-cat {
+              font-variant: small-caps;
+              color: #901826;
+            }
+
+        #frise {
+          font-size: 1vw;
+        }
+
+            @-webkit-keyframes rouge {
+                0% {fill:#7D9EA5;}
+                60% {fill:#c64c4e;}
+                100% {fill:#901826;}
+            }
+            @keyframes rouge {
+                0% {fill:#7D9EA5;}
+                60% {fill:#c64c4e;}
+                100% {fill:#901826;}
+            }
+
+            @-webkit-keyframes rose {
+                0%, 100% {fill:#c64c4e;}
+                30% {fill:#7D9EA5;}
+                60% {fill:#901826;}
+            }
+            @keyframes rose {
+                0%, 100% {fill:#c64c4e;}
+                30% {fill:#7D9EA5;}
+                60% {fill:#901826;}
+            }
+
+            @-webkit-keyframes noir {
+                0%, 50%, 100% {fill:#000;}
+                25%, 75% {fill:#901826;}
+            }
+            @keyframes noir {
+                0%, 20%, 40%, 60%, 100% {fill:#000;}
+                10%, 30%, 50%, 70%, 90% {fill:#901826;}
+            }
+
+main {
+  display: flex;
+  margin-top: -1vw;
+  width: 100%;
+  height: 40vw;
+  overflow: hidden;}
+
+  /*** Select ***/
+
+  #listMonuments {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-top: 1vw;
+    padding: 1vw;
+    font-size: 1vw;
+    font-family: 'Bonveno', 'Raleway';
+  }
+
+      .ligne {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .ligne:hover .valeur {
+        font-weight: 800;
+      }
+
+          .ligne .valeur {
+            padding: 0 1vw;
+            /* pas de retour à la ligne après un espace comme c'est le cas par défaut lorsqu'il n'y a plus assez de place pour le mot suivant */
+            white-space: nowrap;
+            /* on cache ce qui dépasse pour éviter de déformer la cellule avec un flex trop complaisant */
+            overflow: hidden;
+            line-height: 2vw;
+          }
+
+          .ligne:nth-child(odd) {
+            background-color: #dfffff;
+          }
+
+          .ligne>p:nth-child(odd) {
+            font-size: 0.7vw;
+            flex:4;
+          }
+
+                em {
+                  font-weight: 200;
+                  font-style: normal;
+                  font-family: 'Redressed';
+                }
+
+          .ligne>p:nth-child(2) {
+            font-size: 0.9vw;
+            flex:11;
+          }
+
+          [id^='info'] {
+            display: none;
+            box-sizing: border-box;
+            flex-basis: 100%;
+            margin: 0 2vw;
+            background-color: #7D9EA5;
+            color: #7D9EA5;
+            border: 1px solid grey;
+          }
+
+<<<<<<< HEAD
+          
+          #photo { 
+            max-width: 15vw;
+            max-height: 10vw;
+          }
+          
+          #photo img {
+            width: auto;
+            height: auto;
+            max-width: inherit;
+            max-height: inherit;
+          }
+=======
+              #flexblock {
+                display: flex;
+              }
+>>>>>>> 6c0d4e5d481b6dd220a63b372efc8da3fecd10ed
+
+              #essentiel {
+                flex-grow: 3;
+              }
+
+              #photo {
+                max-width: 15vw;
+                max-height: 10vw;
+              }
+
+              #photo img {
+                width: auto;
+                height: auto;
+                max-width: inherit;
+                max-height: inherit;
+              }
+
+              [id^='info'] p {
+                font-size: 0.9vw;
+                line-height: 1.5vw;
+                color: black;
+              }
+
+  /* Boutons Suivant et Précédant */
+    .navig {
+      position: absolute;
+      bottom : 5vw;
+      transform: translate(-100%, 0);
+      padding: 3px 1vw;
+      width: 7vw;
+      font-size: 1vw;
+      line-height: 1vw;
+      margin: 1vw 40%;
+      background-color: #7D9EA5;
+    }
+
+        #suivant { left: 20%; }
+
+        #precedent { left: 0; }
+
+
+
+/* ---- ----- Légendes des époques ---- ----- */
+/* ------- texte blanc sur chronoFrise ------ */
+
+  #legendes {
+    margin-top: -3.55vw;
+    width: 100%;
+    display: flex;
+    height: 3.6vw;
+
+    pointer-events: none;
+    /* Permet de "cliquer à travers" :
+    on ignore cette couche pour les événements souris */
+  }
+
+      #legendes span {
+        text-align: center;
+        color: #fff;
+      }
+
+  /* Préhistoire */
+  #pre {
+      font-family: 'eraserregular';
+      width: 25vw;
+      line-height: 3.6vw;
+      font-size: 2.8vw;
+      margin-left: 2.3vw;
+  }
+
+  /* Protohistoire */
+  #proto {
+      font-family: 'dj_grossnormal';
+      width: 8.2vw;
+      line-height: 1.8vw;
+      font-size: 1.3vw;
+      margin-left: 2.3vw;
+  }
+
+  /* Gallo-romain */
+  #anti {
+      font-family: 'Caesar Dressing', cursive;
+      width: 11vw;
+      line-height: 3.6vw;
+      font-size: 2.8vw;
+      margin-left: 1.6vw;
+  }
+
+  /* Moyen-âge */
+  #m-age {
+      font-family: 'kingthings_italiqueregular';
+      width: 27.5vw;
+      line-height: 3.6vw;
+      font-size: 3.4vw;
+      margin-left: 2.7vw;
+  }
+
+  /* Temps modernes */
+  #temps {
+      font-family: 'shangrilanregular';
+      width: 8.2vw;
+      line-height: 1.8vw;
+      font-size: 2.6vw;
+      margin-left: 2.5vw;
+  }
+
+.coche {
+  fill: #7D9EA5;
+}
+
+[id^=path] {
+  /* empêcher les événements souris sur les "pointillés" de préhistoire et protohistoire */
+  pointer-events: none;
+}

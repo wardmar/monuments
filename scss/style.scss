@@ -1,0 +1,54 @@
+//import
+
+@import 'variable.scss';
+@import 'mixin.scss';
+
+*
+{
+    margin:0;
+    padding:0;
+    border: none;
+}
+
+:root
+{
+    font-size: $rootSize;
+}
+/*** Header ***/
+
+header
+{
+    padding-top: 2em;
+    height: 10em;
+    text-align: center;
+    background-image: url(../img/subtle_dots.png);
+    background-repeat: no-repeat;
+    background-size: 5%;
+    background-position: bottom center;
+}
+
+h1
+{
+    font-size: 5em;
+}
+
+
+main
+{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 80em;
+}
+
+/*** Select ***/
+#select
+{
+    width: 40%;
+}
+
+/*** Select ***/
+#listMonuments
+{
+    width: 60%;
+}

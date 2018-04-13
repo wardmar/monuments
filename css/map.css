@@ -1,0 +1,126 @@
+#map {
+  width: 100%;
+  margin: 1vw;
+  box-shadow: 2px 1px 5px #7D9EA5;
+  transition: 1s;
+  -webkit-transition: 1s; }
+
+#map path:not(.depRose){
+  /* on doit absolument définir le remplissage via CSS si on veut pouvoir agir dessus */
+  fill: #dfffff;
+  transition: 0.2s;
+  stroke: #000000;
+  stroke-width: 1.5;
+ }
+
+#map path:hover {
+  /* au survol la région/le département devient rouge */
+  fill: #901826;
+  stroke: #000000;
+  stroke-width: 1.5;
+}
+
+.depRose {
+  fill:#c64c4e;
+  stroke: #901826;
+}
+.depRouge {
+  fill: #901826;
+}
+/* ----- TRANSFORMATION DU CURSEUR ----- */
+/* Donne des indications à l'utilisateur */
+
+#france {
+  /* Sur la France, sauf DOM-TOM, un clic fait "zoomer" pour afficher le niveau suivant de la carte */
+  cursor: zoom-in;
+}
+.region {
+  /* Lorsqu'on est sur la carte d'une région, les paths correspondent aux départements
+     Un clic ne zoome pas mais ça reste une requête pour afficher des rétultats
+     on affiche une main/index normale, ni zoom ni dézoom */
+  cursor: pointer;
+}
+#fond
+{
+  /* Sur le fond, un clic fait "revenir au niveau supérieur" => on dézoome */
+  cursor: zoom-out;
+  /* On en profite pour lui donner sa couleur */
+  /* fill: white; */
+}
+
+/*** PARTIE GAUCHE : Carte & Champ de recherche ***/
+
+aside {
+  margin: 1vw;
+  position: relative;
+}
+
+[id^=etiquet] {
+  font-family: 'Raleway';
+}
+#etiquet-var, #etiquet-fix {
+  position: absolute;
+  border: 1px solid #901826;
+  background-color: #dfffff;
+  padding: 0 3px;
+  pointer-events: none;
+}
+
+#etiquet-var {
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 1.5em;
+}
+#etiquet-fix {
+  transform: translate(-100%, 0);
+  top: 5%;
+  left: 90%;
+  font-size: 1.5vw;
+  min-width: 0;
+  white-space: nowrap;
+}
+
+/* ------------------ */
+/* --  Formulaire  -- */
+/* ------------------ */
+
+/*** Champ de recherche ***/
+input[type='search'] {
+  border-bottom: 1px solid grey;
+  width: 80%;
+  margin-left: 2vw;
+  padding-left: 0.1vw;
+  height: 2vw;
+  background: none;
+  font-size: 1.8vw;
+}
+
+/*** Bouton MH ***/
+aside input[type='button'] {
+  width: 3vw;
+  color: transparent;
+  background-color: transparent;
+  background-image: url('../img/MH.svg');
+  background-size: contain;
+    height: 3vw;
+}
+input[type='button']:hover {
+  cursor: pointer;
+}
+
+/*** Boutons radio ***/
+#radio {
+  margin-left: 2vw;
+}
+input[type='radio'] {
+  line-height: 1.8vw;
+  /* margin-top: -1px; */
+  vertical-align: middle;
+}
+label {
+  font-size: 1vw;
+  color: grey;
+}
+    label:nth-of-type(2), label:nth-of-type(3) {
+      margin-left: 1vw;
+    }
